@@ -25,7 +25,9 @@ SECRET_KEY = 'l&kdngu^zli7n-3i9*8onp2z7@ym5b)n*50_n$d=fr_m__vjf9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'mswipemovies.herokuapp.com'
+]
 
 
 # Application definition
