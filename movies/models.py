@@ -1,9 +1,12 @@
 from __future__ import unicode_literals
+
 from django.db import models
 
 class Genre(models.Model):
-    """ Genre model: Model for the genre of the movie"""
-    name = models.CharField(max_length=200)
+    """
+    Genre model : Table for movie Genres
+    """
+    name = models.CharField(max_length=500)
 
     class Meta:
         verbose_name = "Genre"
@@ -11,13 +14,16 @@ class Genre(models.Model):
 
     def __str__(self):
         return self.name
+    
 
 class Movie(models.Model):
-    """ Movie model: model for the movie """
-    name = models.CharField(max_length=200)
+    """
+    Movie model : model for Movies
+    """
+    name = models.CharField(max_length=500)
     imdb_score = models.FloatField()
     popularity = models.FloatField()
-    director = models.CharField(max_length=200)
+    director = models.CharField(max_length=500)
     genre = models.ManyToManyField(Genre)
 
     class Meta:
