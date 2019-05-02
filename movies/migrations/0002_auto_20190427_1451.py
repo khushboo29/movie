@@ -25,7 +25,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='movie',
             name='created',
-            field=models.DateTimeField(default=datetime.datetime(2015, 12, 26, 17, 1, 28, 128127, tzinfo=utc),
+            field=models.DateTimeField(default=django.utils.timezone.now),
         ),
         migrations.AddField(
             model_name='movie',
