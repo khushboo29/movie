@@ -1,4 +1,5 @@
 from __future__ import unicode_literals
+
 from django.db import models
 
 class Genre(models.Model):
@@ -23,7 +24,8 @@ class Movie(models.Model):
     imdb_score = models.FloatField()
     popularity = models.FloatField()
     director = models.CharField(max_length=500)
-    genre = models.ManyToManyField(Genre)
+    genre = models.ManyToManyField(Genre,blank=True)
+    #genre = models.ForeignKey(Genre, blank=False, related_name='movies', on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = "Movie"
