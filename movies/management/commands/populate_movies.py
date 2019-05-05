@@ -10,7 +10,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         filepath  = settings.BASE_DIR + '/imdb.json'
-        print("############here is filepath : *********",filepath)
+        
         with open(filepath,'r') as f:
             raw_data = f.read()
             data = json.loads(raw_data)

@@ -25,8 +25,7 @@ class Movie(models.Model):
     popularity = models.FloatField()
     director = models.CharField(max_length=500)
     genre = models.ManyToManyField(Genre,blank=True)
-    #genre = models.ForeignKey(Genre, blank=False, related_name='movies', on_delete=models.CASCADE)
-
+    
     class Meta:
         verbose_name = "Movie"
         verbose_name_plural = "Movies"
